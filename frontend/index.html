@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>P&A Trufas</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./config.js"></script>
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <div class="loading-screen" id="loading-screen">
+      <div class="loader"></div>
+      <p>Preparando as trufas...</p>
+      <small>Se o servidor estiver no Render, isso pode levar alguns segundos.</small>
+    </div>
+
+    <header class="topbar">
+      <a class="brand" href="#">
+        <span class="brand-mark">P&A</span>
+        <span>Trufas</span>
+      </a>
+      <button class="cart-toggle" id="cart-toggle" type="button" aria-label="Abrir carrinho">
+        Carrinho <span id="cart-count">0</span>
+      </button>
+    </header>
+
+    <main>
+      <section class="intro">
+        <div class="intro-copy">
+          <p class="eyebrow">Doces artesanais</p>
+          <h1>Trufas simples, bonitas e prontas para pedir.</h1>
+          <p>
+            Escolha seus sabores favoritos, monte o carrinho e finalize direto pelo WhatsApp.
+          </p>
+        </div>
+        <div class="product-visual" aria-hidden="true">
+          <span class="truffle truffle-one"></span>
+          <span class="truffle truffle-two"></span>
+          <span class="truffle truffle-three"></span>
+        </div>
+      </section>
+
+      <section class="catalog-section" aria-labelledby="catalog-title">
+        <div class="section-heading">
+          <p class="eyebrow">Cardapio</p>
+          <h2 id="catalog-title">Sabores disponiveis</h2>
+        </div>
+        <div class="catalog-grid" id="catalog-grid"></div>
+        <p class="empty-message" id="empty-message" hidden>Nenhuma trufa disponivel agora.</p>
+      </section>
+    </main>
+
+    <aside class="cart-panel" id="cart-panel" aria-label="Carrinho de pedidos" aria-hidden="true">
+      <div class="cart-header">
+        <div>
+          <p class="eyebrow">Pedido</p>
+          <h2>Carrinho</h2>
+        </div>
+        <button class="icon-button" id="close-cart" type="button" aria-label="Fechar carrinho">X</button>
+      </div>
+      <div class="cart-items" id="cart-items"></div>
+      <div class="cart-summary">
+        <div>
+          <span>Total</span>
+          <strong id="cart-total">R$ 0,00</strong>
+        </div>
+        <a class="checkout-button disabled" id="checkout-button" href="#" target="_blank" rel="noreferrer">
+          Finalizar pelo WhatsApp
+        </a>
+      </div>
+    </aside>
+
+    <div class="scrim" id="scrim"></div>
+  </body>
+</html>
